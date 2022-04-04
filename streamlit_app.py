@@ -14,17 +14,20 @@ st.set_page_config(
 credentials = {
     "own_watson" : {
         "ASSISTANT": {
-            "API_KEY": "hD3rHMnUprgYgbU9ltg1hzZ4uAoCRrQ6LZEBh-Eep41u",
+            "API_KEY": "",
             "URL": "https://api.eu-de.assistant.watson.cloud.ibm.com/instances/2518e862-7a58-438b-ab89-76fe5e566e5f",
             "VERSION": "2021-06-14",
         },
         "DISCOVERY":{
-            "API_KEY": "yYJXPctXaXV0_f4V8TEvtGp2Ra5tFv3b3wJFowgofKfy",
+            "API_KEY": "",
             "URL": "https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/10319f3c-bf82-4e41-a8c5-350094035fec",
             "VERSION": "2019-04-30",
         },
     },
 }
+
+credentials['own_watson']['ASSISTANT']['API_KEY'] = st.secrets['ASSISTANT_KEY']
+credentials['own_watson']['DISCOVERY']['API_KEY'] = st.secrets['DISCOVERY_KEY']
 
 # Connect to Assistant
 authenticator = IAMAuthenticator(credentials['own_watson']['ASSISTANT']['API_KEY'])
