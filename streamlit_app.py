@@ -57,46 +57,6 @@ collection_name = collections[0][1]
 # Page details
 st.image("./images/crealogix_logo.png", width=200)
 st.title("Welcome to the Crealogix Discovery Assistant")
-#opt = ['Write your own query','Use default query']
-
-# #st.subheader("Would you like to write your own query or use the default query?")
-# genre = st.radio(
-#      ""
-#      (opt[0],opt[1]))
-
-# if genre == opt[0]:
-#     st.write(f'Your selection: {opt[0]}')
-#     user_input = st.text_input("Enter your query", value = "")
-
-# elif genre == opt[1]: 
-#     st.write(f'Your selection: {opt[1]}')
-#     QA = [
-#         "What is remortgaging?",
-#         "Why would you need to remortgage?",
-#         "Can I remortgage?",
-#         "When can you remortgage?",
-#         "Is remortgaging always possible?",
-#         "The remortgaging process",
-#         "How long does remortgaging take?",
-#         "Do I have to have my house valued for a remortgage?",
-#         "How do I get my house valued for a remortgage?",
-#         "Can I remortgage with the same lender?",
-#         "How often can I remortgage?",
-#         "Do I need to remortgage if I want to build an extension?",
-#         "What are remortgage legal fees?",
-#         "Do I need a solicitor for a remortgage?",
-#         "What are the costs of remortgaging?",
-#         "What's an early repayment charge?",
-#         "Can I remortgage to release equity?",
-#         "Can I remortgage with a bad credit rating?",
-#         "Should I remortgage to consolidate debt?",
-#         "Should I remortgage to get a better interest rate?",
-#     ]
-
-#     user_input = st.radio(
-#         "Select a question", 
-#         (item for item in QA))
-
 
 user_input = st.text_input("Search for:", value = "")
 
@@ -114,4 +74,3 @@ if user_input:
     st.text("Your answer:")
     # documents
     {k:v for k,v in documents.items() if k in ['matching_results','results']}
-    #st.write([doc['answer'],doc[] for doc in documents['results']])
