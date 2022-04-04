@@ -26,8 +26,8 @@ credentials = {
     },
 }
 
-credentials['own_watson']['ASSISTANT']['API_KEY'] = st.secrets['ASSISTANT_KEY']
-credentials['own_watson']['DISCOVERY']['API_KEY'] = st.secrets['DISCOVERY_KEY']
+credentials['own_watson']['ASSISTANT']['API_KEY'] = st.secrets["ASSISTANT_KEY"]
+credentials['own_watson']['DISCOVERY']['API_KEY'] = st.secrets["DISCOVERY_KEY"]
 
 # Connect to Assistant
 authenticator = IAMAuthenticator(credentials['own_watson']['ASSISTANT']['API_KEY'])
@@ -77,3 +77,4 @@ if user_input:
     st.text("Your answer:")
     # documents
     {k:v for k,v in documents.items() if k in ['matching_results','results']}
+    
